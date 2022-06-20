@@ -1,8 +1,8 @@
 /****************************************************
  * Audit Information Platform Service
  * 数据请求服务
- * 2020-08
- * Sunny <tufpsj@yonyou.com>
+ * 2022-06
+ * Sunny
  ****************************************************/
 
 import { request } from 'aip-module';
