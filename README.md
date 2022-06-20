@@ -1,6 +1,6 @@
 # 审计信息化平台 (Audit Information Platform - AIP) 前端模板
 
-A8 前端项目模板
+A8 前端项目模板，该模板是 `aip-toolkit` 工具前端项目的模板 [aip-toolkit](https://github.com/tufeiping/aip-toolkit)。
 
 ## 引入组件
 
