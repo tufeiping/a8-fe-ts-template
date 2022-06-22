@@ -10,14 +10,11 @@ import "react-app-polyfill/stable";
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { HashRouter as Router, Switch } from "react-router-dom";
-import { routers } from "./router";
+import App from "./App";
 // import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Router>
-    <Switch children={routers} />
-  </Router>,
+  <App/>,
   document.getElementById("root")
 );
 

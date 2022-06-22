@@ -7,55 +7,25 @@
 
 //----- Global ------
 import * as React from 'react';
-import { PureComponent } from 'react';
+import DefaultPage from './DefaultPage';
+import Help from './Help';
+import AppRouters, { IAppRoutersProp } from './routers';
 
-import { Button, Icon, Modal } from 'tinper-bee';
-
-import 'tinper-bee/assets/tinper-bee.css';
-import 'bee-modal/build/Modal.css';
-
-import './style/App.css';
-
-export interface IAppProps {
-    icon?: string;
-}
-
-/**
- * 模板主类
- *
- * @class App
- *
- * @extends { PureComponent }
- *
- * @description A8前端模板主类
- */
-class App extends PureComponent<IAppProps, any> {
-    state = {
+const routers: IAppRoutersProp[] = [
+    {
+        path: '/help',
+        component: Help,
+    },
+    {
+        path: '/',
+        component: DefaultPage,
     }
+];
 
-    onClick = () => {
-        Modal.success({
-            title: '提示',
-            content: '确认要删除这条数据吗？',
-            onOk: () => {
-                console.log('OK');
-            }
-        });
-    }
-
-    componentDidMount() {
-        let stopLoading = (window as any).stopLoading;
-        stopLoading && stopLoading();
-    }
-
+class App extends React.PureComponent<any, any> {
     render() {
         return (
-            <div className='main-div'>
-                <Button colors="primary" onClick={this.onClick}>
-                    <Icon type={this.props.icon || "uf-add-c-o"} />
-                    确定
-                </Button>
-            </div>
+            <AppRouters routers={routers} />
         );
     }
 }
