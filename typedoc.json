@@ -1,0 +1,10 @@
+{
+	"entryPoints": ["src/index.ts"],
+	"out": "./docs",
+	"name": "A8-Template API",
+	"theme": "hierarchy",
+	"readme": "./README.md",
+	"hideGenerator": true,
+	"excludePrivate": true,
+	"includeVersion": true 
+}
